@@ -1,0 +1,133 @@
+import { HTMLAttributes } from "react";
+
+type LogoProps = HTMLAttributes<SVGSVGElement> & {
+  variant?: "icon" | "horizontal";
+};
+
+const gradientId = "altrics-logo-gradient";
+const glowId = "altrics-logo-glow";
+
+export function AltricsLogo({ variant = "horizontal", ...props }: LogoProps) {
+  if (variant === "icon") {
+    return (
+      <svg
+        viewBox="0 0 40 40"
+        aria-label="altrics logo"
+        role="img"
+        {...props}
+      >
+        <Defs />
+        <rect
+          x="2"
+          y="2"
+          width="36"
+          height="36"
+          rx="12"
+          fill="url(#altrics-logo-gradient)"
+        />
+        <circle
+          cx="20"
+          cy="20"
+          r="11"
+          fill="none"
+          stroke="rgba(15,23,42,0.25)"
+          strokeWidth="1.4"
+        />
+        <path
+          d="M14.5 23.8 18.8 13c.2-.5.7-.8 1.2-.8s1 .3 1.2.8l4.3 10.8c.3.7-.1 1.5-.8 1.8-.7.3-1.5-.1-1.8-.8l-.7-1.7h-4.9l-.7 1.7c-.3.7-1.1 1.1-1.8.8-.7-.3-1.1-1.1-.8-1.8Zm6.3-7.4-1.4 3.7h2.8l-1.4-3.7Z"
+          fill="#0b1020"
+        />
+        <circle
+          cx="26.4"
+          cy="14.4"
+          r="1.7"
+          fill="none"
+          stroke="url(#altrics-logo-glow)"
+          strokeWidth="1.2"
+        />
+      </svg>
+    );
+  }
+
+  // horizontal
+  return (
+    <svg
+      viewBox="0 0 180 40"
+      aria-label="altrics"
+      role="img"
+      {...props}
+    >
+      <Defs />
+      <g>
+        <rect
+          x="2"
+          y="4"
+          width="32"
+          height="32"
+          rx="10"
+          fill="url(#altrics-logo-gradient)"
+        />
+        <circle
+          cx="18"
+          cy="20"
+          r="10"
+          fill="none"
+          stroke="rgba(15,23,42,0.25)"
+          strokeWidth="1.4"
+        />
+        <path
+          d="M12.9 23.2 16.8 13c.2-.5.7-.8 1.2-.8s1 .3 1.2.8l3.9 10.2c.3.7-.1 1.5-.8 1.8-.7.3-1.5-.1-1.8-.8l-.7-1.7h-4.2l-.7 1.7c-.3.7-1.1 1.1-1.8.8-.7-.3-1.1-1.1-.8-1.8Zm5.5-7.2-1.2 3.3h2.4l-1.2-3.3Z"
+          fill="#020617"
+        />
+        <circle
+          cx="23.4"
+          cy="14.2"
+          r="1.6"
+          fill="none"
+          stroke="url(#altrics-logo-glow)"
+          strokeWidth="1.1"
+        />
+      </g>
+      <g
+        transform="translate(44, 9)"
+        fill="currentColor"
+      >
+        <path d="M8.3 21.4c-3.7 0-6.4-2.7-6.4-6.7 0-4.1 2.7-6.8 6.5-6.8 3.7 0 6.3 2.7 6.3 6.7 0 4.1-2.7 6.8-6.4 6.8Zm0-2.5c2.2 0 3.8-1.7 3.8-4.3 0-2.7-1.5-4.4-3.8-4.4-2.3 0-3.9 1.7-3.9 4.4 0 2.7 1.6 4.3 3.9 4.3Z" />
+        <path d="M19.7 21.4c-2.7 0-4.4-1.7-4.4-4.5v-7.1h2.7v6.9c0 1.6.9 2.5 2.4 2.5 1.6 0 2.6-1 2.6-2.7v-6.7h2.7V21h-2.6l-.2-1.6h-.1c-.7 1.2-1.9 2-3.8 2Z" />
+        <path d="M31.7 21.2h-2.7V2h2.7v6.7h.1c.6-1.1 1.8-1.8 3.4-1.8 2.7 0 4.5 2.1 4.5 5.4 0 3.5-2.2 5.8-5.3 5.8-1.5 0-2.7-.7-3.3-1.9h-.1l-.2 1.1Zm3-2.4c1.8 0 3-1.4 3-3.7 0-2.2-1.1-3.5-2.9-3.5-1.7 0-2.9 1.4-2.9 3.5 0 2.2 1.1 3.7 2.9 3.7Z" />
+        <path d="M43.8 21.2v-16h2.7v16h-2.7Z" />
+        <path d="M55.4 21.4c-3.5 0-5.9-2.4-5.9-6.1 0-3.7 2.4-6.2 5.9-6.2 3.6 0 5.7 2.4 5.7 6.2 0 3.7-2.4 6.1-5.7 6.1Zm0-2.3c1.9 0 3-1.5 3-3.8s-1.1-3.8-3-3.8c-1.9 0-3.1 1.5-3.1 3.8s1.2 3.8 3.1 3.8Z" />
+        <path d="M64.4 21.2V9.4h2.6l.2 1.7h.1c.6-1.2 1.6-2 3.2-2 .4 0 .8 0 1.1.1v2.5c-.3-.1-.8-.2-1.3-.2-1.7 0-2.8 1.1-2.8 2.8v6h-3.1Z" />
+        <path d="M79 21.4c-3.4 0-5.7-2.4-5.7-6.1 0-3.8 2.4-6.2 5.9-6.2 3.4 0 5.6 2.3 5.6 5.9 0 .4 0 .8-.1 1.1h-8.5c.2 2 1.5 3.2 3.3 3.2 1.3 0 2.3-.6 2.7-1.5l2.2 1.2c-.8 1.6-2.5 2.4-4.4 2.4Zm-3-7.2h5.9c-.1-1.7-1.3-2.8-2.9-2.8-1.7 0-2.8 1.1-3 2.8Z" />
+      </g>
+    </svg>
+  );
+}
+
+function Defs() {
+  return (
+    <defs>
+      <linearGradient
+        id={gradientId}
+        x1="0%"
+        y1="0%"
+        x2="100%"
+        y2="100%"
+      >
+        <stop offset="0%" stopColor="#22d3ee" />
+        <stop offset="40%" stopColor="#6366f1" />
+        <stop offset="100%" stopColor="#a855f7" />
+      </linearGradient>
+      <radialGradient
+        id={glowId}
+        cx="50%"
+        cy="50%"
+        r="50%"
+      >
+        <stop offset="0%" stopColor="#e0f2fe" stopOpacity="1" />
+        <stop offset="100%" stopColor="#22d3ee" stopOpacity="0.1" />
+      </radialGradient>
+    </defs>
+  );
+}
+
