@@ -2,29 +2,29 @@ import { Section } from "../layout/Section";
 
 const useCases = [
   {
-    title: "Sales automation",
+    title: "Автоматизация продаж",
     description:
-      "Qualify leads, answer questions, prepare proposals and push deals through CRM without manual data entry."
+      "Квалификация лидов, ответы на типовые вопросы, подготовка коммерческих и движение сделок в CRM без ручного ввода."
   },
   {
-    title: "Order calculation automation",
+    title: "Автоматический просчёт заказов",
     description:
-      "Automatically calculate complex orders, prices and delivery costs based on your catalog, margins and rules."
+      "AI считает сложные заказы, цены и стоимость доставки по вашему каталогу, марже и бизнес‑правилам."
   },
   {
-    title: "Customer support AI",
+    title: "AI‑поддержка клиентов",
     description:
-      "AI agent answers typical questions in Russian from your knowledge base and escalates complex issues to humans."
+      "AI‑агент на русском отвечает на типовые запросы из вашей базы знаний и передаёт сложные кейсы людям."
   },
   {
-    title: "Document processing",
+    title: "Обработка документов",
     description:
-      "Extract data from contracts, invoices and acts, validate fields and sync with accounting or ERP."
+      "Извлечение данных из договоров, счетов и актов, проверка полей и синхронизация с бухгалтерией или ERP."
   },
   {
-    title: "CRM automation",
+    title: "Автоматизация CRM",
     description:
-      "Keep CRM clean: update statuses, fill in fields, create tasks and reminders automatically."
+      "Поддержание чистоты CRM: автоматическое обновление статусов, заполнение полей, постановка задач и напоминаний."
   }
 ];
 
@@ -35,10 +35,11 @@ export function UseCasesSection() {
         <div className="flex flex-col gap-8">
           <div className="max-w-2xl">
             <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">
-              Example use cases
+              Примеры сценариев
             </h2>
             <p className="mt-4 text-balance text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">
-              Real workflows we automate for small and medium businesses.
+              Реальные процессы, которые мы автоматизируем для малого и среднего
+              бизнеса.
             </p>
           </div>
 
@@ -60,7 +61,7 @@ export function UseCasesSection() {
                   <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-sky-500/15 text-[0.6rem]">
                     24/7
                   </span>
-                  <span>AI employee, not another SaaS tool</span>
+                  <span>AI‑сотрудник, а не ещё один сервис</span>
                 </div>
               </article>
             ))}

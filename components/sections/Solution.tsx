@@ -2,24 +2,24 @@ import { Section } from "../layout/Section";
 
 const solutions = [
   {
-    title: "AI assistants process requests",
+    title: "AI‑ассистенты обрабатывают обращения",
     description:
-      "AI employees chat with your clients, suppliers and partners, understand intent and follow your business rules."
+      "AI‑сотрудники общаются с клиентами, поставщиками и партнёрами, понимают запрос и действуют по вашим правилам."
   },
   {
-    title: "AI calculates orders automatically",
+    title: "AI автоматически считает заказы",
     description:
-      "Orders, pricing, discounts and delivery options are calculated instantly based on your data and constraints."
+      "Заказы, цены, скидки и варианты доставки рассчитываются мгновенно на основе ваших данных и ограничений."
   },
   {
-    title: "AI integrates with CRM",
+    title: "AI интегрируется с CRM",
     description:
-      "Every interaction is logged to your CRM or ERP, tasks are created, statuses are updated and fields stay in sync."
+      "Каждое взаимодействие попадает в CRM или ERP, создаются задачи, обновляются статусы и поля всегда в актуальном состоянии."
   },
   {
-    title: "AI automates workflows",
+    title: "AI автоматизирует процессы",
     description:
-      "From first client message to closed deal, altrics orchestrates the steps across tools without human micromanagement."
+      "От первого обращения клиента до закрытой сделки altrics управляет шагами между системами без ручного микроменеджмента."
   }
 ];
 
@@ -30,16 +30,16 @@ export function SolutionSection() {
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-md">
             <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-violet-300">
-              The solution
+              Решение
             </h2>
             <p className="mt-4 text-balance text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">
-              altrics builds AI assistants that take over repeatable operations
-              in your company.
+              altrics создаёт AI‑ассистентов, которые берут на себя повторяющиеся
+              операции в вашей компании.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-slate-400 sm:text-base">
-              Instead of adding more people to close operational gaps, we create
-              AI employees that plug into your existing tools and reliably
-              perform routine work end‑to‑end.
+              Вместо того чтобы нанимать дополнительных людей, мы запускаем
+              AI‑сотрудников, которые подключаются к вашим текущим инструментам и
+              надёжно выполняют рутину от начала до конца.
             </p>
           </div>
 

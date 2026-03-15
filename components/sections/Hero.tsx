@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { AltricsLogo } from "../branding/AltricsLogo";
 
 const stats = [
-  { label: "Employee time saved", value: "50–80%" },
-  { label: "Faster processing", value: "x3–x5" },
-  { label: "Industries", value: "Sales, logistics, e‑com" }
+  { label: "Экономия времени сотрудников", value: "50–80%" },
+  { label: "Ускорение процессов", value: "в 3–5 раз" },
+  { label: "Отрасли", value: "Продажи, логистика, e‑com" }
 ];
 
 export function Hero() {
@@ -22,12 +22,12 @@ export function Hero() {
           />
         </div>
         <div className="hidden items-center gap-4 text-xs font-medium text-slate-300/80 sm:flex">
-          <span className="rounded-full border border-white/10 bg-slate-900/40 px-3 py-1">
-            AI automation studio
-          </span>
-          <span className="hidden text-slate-400 md:inline">
-            For small & medium businesses in Russia
-          </span>
+            <span className="rounded-full border border-white/10 bg-slate-900/40 px-3 py-1">
+              AI‑студия бизнес‑автоматизации
+            </span>
+            <span className="hidden text-slate-400 md:inline">
+              Для малого и среднего бизнеса в России
+            </span>
         </div>
       </header>
 
@@ -49,9 +49,9 @@ export function Hero() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.05 }}
             className="mt-6 text-balance text-4xl font-semibold tracking-tight text-slate-50 sm:text-5xl md:text-6xl"
           >
-            AI employees
+            AI‑сотрудники
             <br />
-            for your business
+            для вашего бизнеса
           </motion.h1>
 
           <motion.p
@@ -60,10 +60,10 @@ export function Hero() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
             className="mt-6 text-balance text-base leading-relaxed text-slate-300 sm:text-lg"
           >
-            Automate routine operations in sales, logistics, e‑commerce,
-            services and manufacturing. altrics builds AI assistants and
-            automations that free your team from manual work, reduce costs and
-            increase efficiency.
+            Автоматизируйте рутину в продажах, логистике, e‑commerce, услугах и
+            производстве. altrics создаёт AI‑ассистентов и автоматизации, которые
+            снимают ручную работу с команды, снижают затраты и повышают
+            операционную эффективность.
           </motion.p>
 
           <motion.div
@@ -76,11 +76,11 @@ export function Hero() {
               href="#cta"
               className="inline-flex items-center justify-center rounded-full bg-gradient-to-tr from-sky-400 via-indigo-500 to-violet-500 px-7 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-indigo-500/40 transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
             >
-              Get AI automation
+              Получить AI‑автоматизацию
             </a>
             <p className="max-w-[13rem] text-xs text-slate-400">
-              We analyze your processes and launch automation in weeks, not
-              months.
+              Проанализируем процессы и запустим автоматизацию за недели, а не
+              месяцы.
             </p>
           </motion.div>
 
@@ -119,10 +119,10 @@ export function Hero() {
               <div className="relative flex items-center justify-between gap-4">
                 <div>
                   <p className="text-xs font-medium text-slate-400">
-                    Live operations
+                    Живые операции
                   </p>
                   <p className="mt-1 text-sm font-semibold text-slate-50">
-                    AI handles routine work
+                    AI берёт рутину на себя
                   </p>
                 </div>
                 <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/15 px-3 py-1 text-[0.7rem] font-medium text-emerald-300 ring-1 ring-emerald-400/40">
@@ -133,35 +133,35 @@ export function Hero() {
 
               <div className="mt-6 grid grid-cols-2 gap-3 text-xs text-slate-200 sm:text-sm">
                 <VisualCard
-                  title="Sales"
+                  title="Отдел продаж"
                   items={[
-                    "Qualify leads automatically",
-                    "Prepare offers from CRM",
-                    "Send follow‑ups without delays"
+                    "Автоматическая квалификация лидов",
+                    "Подготовка коммерческих из CRM",
+                    "Напоминания и дожим без задержек"
                   ]}
                 />
                 <VisualCard
-                  title="Orders & logistics"
+                  title="Заказы и логистика"
                   items={[
-                    "Calculate orders in seconds",
-                    "Generate documents",
-                    "Sync data across systems"
+                    "Расчёт заказов за секунды",
+                    "Формирование документов",
+                    "Синхронизация систем"
                   ]}
                 />
                 <VisualCard
-                  title="Support"
+                  title="Поддержка"
                   items={[
-                    "Instant client responses",
-                    "Answers from your knowledge",
-                    "Escalate complex cases"
+                    "Мгновенные ответы клиентам",
+                    "Знания из вашей базы",
+                    "Эскалация сложных запросов"
                   ]}
                 />
                 <VisualCard
-                  title="Back‑office"
+                  title="Бэк‑офис"
                   items={[
-                    "Process documents",
-                    "Prepare reports",
-                    "Update CRM and tables"
+                    "Обработка документов",
+                    "Подготовка отчётности",
+                    "Обновление CRM и таблиц"
                   ]}
                 />
               </div>

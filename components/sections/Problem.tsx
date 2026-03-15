@@ -2,24 +2,24 @@ import { Section } from "../layout/Section";
 
 const problems = [
   {
-    title: "Managers waste hours calculating orders",
+    title: "Менеджеры тратят часы на просчёт заказов",
     description:
-      "Employees manually collect data from CRM, spreadsheets and messengers just to prepare one order or invoice."
+      "Сотрудники вручную собирают данные из CRM, таблиц и мессенджеров, чтобы подготовить один счёт или коммерческое предложение."
   },
   {
-    title: "Manual data processing",
+    title: "Ручная обработка данных",
     description:
-      "Orders, payments, shipments and stock data are copied by hand between systems, leading to delays and frustration."
+      "Заказы, оплаты, отгрузки и остатки вносятся вручную в разные системы, из‑за чего появляются задержки и хаос."
   },
   {
-    title: "Slow responses to clients",
+    title: "Медленные ответы клиентам",
     description:
-      "Clients wait minutes or hours for answers to typical questions because the team is busy with routine tasks."
+      "Клиенты ждут минуты и часы даже на типовые вопросы, потому что команда занята операционкой."
   },
   {
-    title: "Human errors",
+    title: "Человеческие ошибки",
     description:
-      "Typos, miscalculations and forgotten updates in CRM or ERP result in lost revenue and damaged reputation."
+      "Опечатки, неверные суммы и забытые обновления статусов в CRM приводят к потерянной выручке и испорченной репутации."
   }
 ];
 
@@ -30,16 +30,16 @@ export function ProblemSection() {
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-md">
             <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">
-              The problem
+              Проблема
             </h2>
             <p className="mt-4 text-balance text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">
-              Routine operations silently eat hours from your business every
-              week.
+              Рутинные операции незаметно съедают часы работы вашего бизнеса
+              каждую неделю.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-slate-400 sm:text-base">
-              In most small and medium-sized companies, highly paid specialists
-              spend a large part of their day on low‑value manual work instead
-              of growing revenue and improving the product.
+              В большинстве компаний сотрудники с высокой экспертизой тратят
+              значимую часть дня на низкоценную ручную работу вместо роста
+              выручки и развития продукта.
             </p>
           </div>
 

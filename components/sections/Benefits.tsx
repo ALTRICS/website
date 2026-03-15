@@ -2,24 +2,24 @@ import { Section } from "../layout/Section";
 
 const benefits = [
   {
-    title: "Save 50–80% employee time",
+    title: "Экономия 50–80% времени сотрудников",
     description:
-      "AI employees take over monotonous work: answering typical questions, filling CRM, preparing documents and reports."
+      "AI‑сотрудники берут на себя однообразные задачи: ответы на типовые вопросы, заполнение CRM, подготовку документов и отчётов."
   },
   {
-    title: "Reduce operational costs",
+    title: "Снижение операционных затрат",
     description:
-      "Instead of hiring more staff to close process gaps, you scale operations with AI assistants that work 24/7."
+      "Вместо увеличения штата вы масштабируете операции за счёт AI‑ассистентов, которые работают 24/7."
   },
   {
-    title: "Faster processing",
+    title: "Быстрая обработка",
     description:
-      "Orders, calculations and responses are handled in seconds, not hours — even during peak load."
+      "Заказы, расчёты и ответы выполняются за секунды, а не часы — даже в пиковые моменты."
   },
   {
-    title: "Scale without hiring",
+    title: "Рост без найма",
     description:
-      "When order volume grows, AI simply handles more tasks in parallel while your core team focuses on strategy."
+      "Когда увеличивается объём заказов, AI просто обрабатывает больше задач параллельно, а команда сосредотачивается на стратегии."
   }
 ];
 
@@ -30,15 +30,15 @@ export function BenefitsSection() {
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-md">
             <h2 className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">
-              Benefits
+              Преимущества
             </h2>
             <p className="mt-4 text-balance text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">
-              Tangible business results, not just another AI demo.
+              Осязаемые бизнес‑результаты, а не очередная AI‑демо.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-slate-400 sm:text-base">
-              We design automations that are directly tied to your P&amp;L:
-              time saved, costs reduced and revenue protected from operational
-              mistakes.
+              Мы проектируем автоматизации, которые напрямую влияют на P&amp;L:
+              экономят время, снижают затраты и защищают выручку от
+              операционных ошибок.
             </p>
           </div>
 

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "altrics — AI employees for your business",
+  title: "altrics — AI‑сотрудники для вашего бизнеса",
   description:
-    "altrics helps small and medium-sized businesses automate routine operations using AI assistants and automations."
+    "altrics помогает малому и среднему бизнесу в России автоматизировать рутинные операции с помощью AI‑ассистентов и автоматизаций."
 };
 
 export default function RootLayout({

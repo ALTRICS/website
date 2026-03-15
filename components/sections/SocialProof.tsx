@@ -1,12 +1,6 @@
 import { Section } from "../layout/Section";
 
-const placeholders = [
-  "Company logo",
-  "Company logo",
-  "Company logo",
-  "Company logo",
-  "Company logo"
-];
+const placeholders = ["Лого компании", "Лого компании", "Лого компании", "Лого компании", "Лого компании"];
 
 export function SocialProofSection() {
   return (
@@ -16,15 +10,15 @@ export function SocialProofSection() {
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
               <p className="text-xs font-medium uppercase tracking-[0.25em] text-slate-400">
-                Trusted by modern teams
+                Нам доверяют современные команды
               </p>
               <p className="mt-3 text-sm text-slate-400">
-                Placeholder for client logos from sales, logistics, e‑commerce,
-                services and manufacturing.
+                Здесь будут логотипы клиентов из сфер продаж, логистики, e‑commerce,
+                услуг и производства.
               </p>
             </div>
             <p className="text-xs text-slate-500">
-              We work with small and medium businesses across Russia.
+              Работаем с малым и средним бизнесом по всей России.
             </p>
           </div>
 

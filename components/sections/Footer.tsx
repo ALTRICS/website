@@ -10,11 +10,11 @@ export function Footer() {
             className="h-6 w-auto text-slate-100"
           />
           <p className="max-w-sm text-xs text-slate-500">
-            AI automation studio helping small and medium businesses in Russia
-            remove routine from daily operations.
+            Студия AI‑автоматизации, которая помогает малому и среднему бизнесу
+            в России убрать рутину из ежедневных операций.
           </p>
           <p className="text-[0.7rem] text-slate-600">
-            © {new Date().getFullYear()} altrics. All rights reserved.
+            © {new Date().getFullYear()} altrics. Все права защищены.
           </p>
         </div>
 
@@ -36,7 +36,7 @@ export function Footer() {
             </a>
           </div>
           <p className="text-[0.7rem] text-slate-600">
-            Replace contacts with your actual Telegram and email.
+            Замените ссылки на ваши рабочие контакты в Telegram и email.
           </p>
         </div>
       </div>
