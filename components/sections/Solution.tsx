@@ -33,7 +33,7 @@ export function SolutionSection() {
               Решение
             </h2>
             <p className="mt-4 text-balance text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">
-              altrics создаёт AI‑ассистентов, которые берут на себя повторяющиеся
+              ALTRICS создаёт AI‑ассистентов, которые берут на себя повторяющиеся
               операции в вашей компании.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-slate-400 sm:text-base">

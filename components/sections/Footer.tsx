@@ -14,14 +14,14 @@ export function Footer() {
             в России убрать рутину из ежедневных операций.
           </p>
           <p className="text-[0.7rem] text-slate-600">
-            © {new Date().getFullYear()} altrics. Все права защищены.
+            © {new Date().getFullYear()} ALTRICS. Все права защищены.
           </p>
         </div>
 
         <div className="flex flex-col items-start gap-3 text-xs sm:items-end">
           <div className="flex flex-wrap items-center gap-3">
             <a
-              href="https://t.me/your_telegram_here"
+              href="https://t.me/+N573lsg4kWgwNGRi"
               target="_blank"
               rel="noreferrer"
               className="rounded-full border border-slate-700/80 bg-slate-900/80 px-4 py-1.5 text-xs font-medium text-slate-200 transition hover:border-sky-400 hover:bg-slate-900"
@@ -29,15 +29,12 @@ export function Footer() {
               Telegram
             </a>
             <a
-              href="mailto:hello@altrics.ai"
+              href="mailto:support@altrics.tech"
               className="rounded-full border border-slate-700/80 bg-slate-900/80 px-4 py-1.5 text-xs font-medium text-slate-200 transition hover:border-sky-400 hover:bg-slate-900"
             >
-              hello@altrics.ai
+              support@altrics.tech
             </a>
           </div>
-          <p className="text-[0.7rem] text-slate-600">
-            Замените ссылки на ваши рабочие контакты в Telegram и email.
-          </p>
         </div>
       </div>
     </footer>
