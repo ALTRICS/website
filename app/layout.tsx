@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     shortcut: [{ url: "/icon.svg", type: "image/svg+xml" }],
     apple: [{ url: "/icon.png", type: "image/png" }],
   },
+  verification: {
+    yandex: "a8de06dd1a0b7692",
+  },
   title: "ALTRICS — Автоматизация процессов для вашего бизнеса",
   description:
     "ALTRICS помогает малому и среднему бизнесу в России автоматизировать рутинные операции с помощью AI‑ассистентов и автоматизаций."
