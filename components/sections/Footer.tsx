@@ -1,13 +1,16 @@
-import { AltricsLogo } from "../branding/AltricsLogo";
+import Image from "next/image";
 
 export function Footer() {
   return (
     <footer className="border-t border-slate-800/80 bg-slate-950 py-8">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
         <div className="flex flex-col gap-3">
-          <AltricsLogo
-            variant="horizontal"
-            className="h-6 w-auto text-slate-100"
+          <Image
+            src="/logo.svg"
+            alt="ALTRICS"
+            width={150}
+            height={24}
+            className="h-6 w-auto"
           />
           <p className="max-w-sm text-xs text-slate-500">
             Студия AI‑автоматизации, которая помогает малому и среднему бизнесу
@@ -15,6 +18,11 @@ export function Footer() {
           </p>
           <p className="text-[0.7rem] text-slate-600">
             © {new Date().getFullYear()} ALTRICS. Все права защищены.
+          </p>
+          <p className="mt-1 text-[0.65rem] text-slate-600">
+            * Показатель рассчитан на основе наших внутренних данных по
+            реализованным AI‑автоматизациям и может отличаться в зависимости от
+            отрасли и конкретных процессов.
           </p>
         </div>
 

@@ -1,11 +1,11 @@
  "use client";
 
 import { motion } from "framer-motion";
-import { AltricsLogo } from "../branding/AltricsLogo";
+import Image from "next/image";
 
 const stats = [
   { label: "Экономия времени сотрудников", value: "50–80%" },
-  { label: "Ускорение процессов", value: "в 3–5 раз" },
+  { label: "Ускорение процессов", value: "до 10 раз" },
   { label: "Отрасли", value: "Продажи, логистика, e‑com" }
 ];
 
@@ -16,17 +16,21 @@ export function Hero() {
 
       <header className="relative mx-auto flex w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-3">
-          <AltricsLogo
-            variant="horizontal"
-            className="h-7 w-auto text-slate-50"
+          <Image
+            src="/logo.svg"
+            alt="ALTRICS"
+            width={160}
+            height={28}
+            priority
+            className="h-16 w-auto"
           />
         </div>
         <div className="hidden items-center gap-4 text-xs font-medium text-slate-300/80 sm:flex">
             <span className="rounded-full border border-white/10 bg-slate-900/40 px-3 py-1">
-              AI‑студия бизнес‑автоматизации
+              ИИ‑студия бизнес‑автоматизации
             </span>
             <span className="hidden text-slate-400 md:inline">
-              Для малого и среднего бизнеса в России
+              Для малого и среднего бизнеса
             </span>
         </div>
       </header>
@@ -40,7 +44,7 @@ export function Hero() {
             className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-slate-950/50 px-3 py-1 text-xs font-medium text-slate-300 backdrop-blur"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-            AI employees that work 24/7
+            ИИ‑сотрудники, которые работают 24/7
           </motion.div>
 
           <motion.h1
@@ -49,7 +53,7 @@ export function Hero() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.05 }}
             className="mt-6 text-balance text-4xl font-semibold tracking-tight text-slate-50 sm:text-5xl md:text-6xl"
           >
-            AI‑сотрудники
+            Автоматизация процессов
             <br />
             для вашего бизнеса
           </motion.h1>
@@ -60,10 +64,10 @@ export function Hero() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
             className="mt-6 text-balance text-base leading-relaxed text-slate-300 sm:text-lg"
           >
-            Автоматизируйте рутину в продажах, логистике, e‑commerce, услугах и
-            производстве. altrics создаёт AI‑ассистентов и автоматизации, которые
-            снимают ручную работу с команды, снижают затраты и повышают
-            операционную эффективность.
+            Ускорьте приём заявок и обработку заказов{" "}
+            <strong>в 10 раз*</strong> с помощью искусственного интеллекта. Мы
+            создаём автоматизации, которые снимают ручную работу с вашей
+            команды, снижают затраты и повышают операционную эффективность.
           </motion.p>
 
           <motion.div
@@ -76,7 +80,7 @@ export function Hero() {
               href="#cta"
               className="inline-flex items-center justify-center rounded-full bg-gradient-to-tr from-sky-400 via-indigo-500 to-violet-500 px-7 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-indigo-500/40 transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
             >
-              Получить AI‑автоматизацию
+              Оставить заявку на автоматизацию
             </a>
             <p className="max-w-[13rem] text-xs text-slate-400">
               Проанализируем процессы и запустим автоматизацию за недели, а не
@@ -118,11 +122,8 @@ export function Hero() {
 
               <div className="relative flex items-center justify-between gap-4">
                 <div>
-                  <p className="text-xs font-medium text-slate-400">
-                    Живые операции
-                  </p>
                   <p className="mt-1 text-sm font-semibold text-slate-50">
-                    AI берёт рутину на себя
+                    Искуссственный интеллект берёт рутину на себя
                   </p>
                 </div>
                 <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/15 px-3 py-1 text-[0.7rem] font-medium text-emerald-300 ring-1 ring-emerald-400/40">
@@ -136,7 +137,7 @@ export function Hero() {
                   title="Отдел продаж"
                   items={[
                     "Автоматическая квалификация лидов",
-                    "Подготовка коммерческих из CRM",
+                    "Подготовка коммерческих предложений",
                     "Напоминания и дожим без задержек"
                   ]}
                 />
@@ -152,8 +153,8 @@ export function Hero() {
                   title="Поддержка"
                   items={[
                     "Мгновенные ответы клиентам",
-                    "Знания из вашей базы",
-                    "Эскалация сложных запросов"
+                   
+                    "Понимание сложных запросов"
                   ]}
                 />
                 <VisualCard

@@ -2,24 +2,24 @@ import { Section } from "../layout/Section";
 
 const solutions = [
   {
-    title: "AI‑ассистенты обрабатывают обращения",
+    title: "ИИ‑ассистенты обрабатывают обращения",
     description:
-      "AI‑сотрудники общаются с клиентами, поставщиками и партнёрами, понимают запрос и действуют по вашим правилам."
+      "ИИ‑сотрудники общаются с клиентами, поставщиками и партнёрами, понимают запрос и действуют по вашим правилам."
   },
   {
-    title: "AI автоматически считает заказы",
+    title: "ИИ автоматически считает заказы",
     description:
-      "Заказы, цены, скидки и варианты доставки рассчитываются мгновенно на основе ваших данных и ограничений."
+      "Заказы, цены, и варианты доставки рассчитываются мгновенно на основе ваших данных и ограничений."
   },
   {
-    title: "AI интегрируется с CRM",
+    title: "ИИ интегрируется с CRM",
     description:
       "Каждое взаимодействие попадает в CRM или ERP, создаются задачи, обновляются статусы и поля всегда в актуальном состоянии."
   },
   {
-    title: "AI автоматизирует процессы",
+    title: "ИИ автоматизирует процессы",
     description:
-      "От первого обращения клиента до закрытой сделки altrics управляет шагами между системами без ручного микроменеджмента."
+      "От первого обращения клиента до закрытой сделки Altrics управляет шагами между системами без ручного микроменеджмента."
   }
 ];
 
@@ -33,7 +33,7 @@ export function SolutionSection() {
               Решение
             </h2>
             <p className="mt-4 text-balance text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">
-              ALTRICS создаёт AI‑ассистентов, которые берут на себя повторяющиеся
+              ALTRICS создаёт ИИ‑ассистентов, которые берут на себя повторяющиеся
               операции в вашей компании.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-slate-400 sm:text-base">
@@ -53,7 +53,7 @@ export function SolutionSection() {
                 <div className="relative">
                   <h3 className="flex items-center gap-2 text-sm font-semibold text-slate-50">
                     <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-sky-500/20 text-[0.65rem] text-sky-300 ring-1 ring-sky-400/40">
-                      AI
+                      ИИ
                     </span>
                     {solution.title}
                   </h3>

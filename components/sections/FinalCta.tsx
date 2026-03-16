@@ -11,10 +11,10 @@ export function FinalCtaSection() {
 
           <div className="relative max-w-2xl">
             <h2 className="text-balance text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">
-              Автоматизируйте бизнес с помощью AI.
+              Автоматизируйте бизнес с помощью ИИ.
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-slate-100/80 sm:text-base">
-              Расскажите о текущих процессах — мы предложим конкретные AI‑решения,
+              Расскажите о текущих процессах — мы предложим конкретные ИИ‑решения,
               которые освободят время команды и сократят операционные расходы.
             </p>
           </div>

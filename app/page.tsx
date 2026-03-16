@@ -4,7 +4,7 @@ import { SolutionSection } from "@/components/sections/Solution";
 import { UseCasesSection } from "@/components/sections/UseCases";
 import { HowItWorksSection } from "@/components/sections/HowItWorks";
 import { BenefitsSection } from "@/components/sections/Benefits";
-import { SocialProofSection } from "@/components/sections/SocialProof";
+// import { SocialProofSection } from "@/components/sections/SocialProof";
 import { FinalCtaSection } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/sections/Footer";
 
@@ -17,7 +17,7 @@ export default function HomePage() {
       <UseCasesSection />
       <HowItWorksSection />
       <BenefitsSection />
-      <SocialProofSection />
+      {/* <SocialProofSection /> */}
       <FinalCtaSection />
       <Footer />
     </div>
