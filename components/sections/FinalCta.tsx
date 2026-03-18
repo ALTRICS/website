@@ -21,7 +21,7 @@ export function FinalCtaSection() {
 
           <div className="relative mt-8 flex flex-col items-center justify-start gap-4 sm:flex-row lg:mt-8">
             <a
-              href="mailto:support@altrics.tech?subject=Запрос%20на%20AI‑автоматизацию"
+              href="mailto:contact@altrics.tech?subject=Запрос%20на%20AI‑автоматизацию"
               className="inline-flex items-center justify-center rounded-full bg-slate-950 px-7 py-3 text-sm font-semibold text-slate-50 shadow-lg shadow-slate-900/60 ring-1 ring-sky-400/80 transition hover:bg-slate-900 hover:text-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
             >
               Оставить запрос на автоматизацию
