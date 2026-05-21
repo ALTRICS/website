@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: "class",
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,24 +9,45 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#020617",
-        foreground: "#e5e7eb",
+        background: "#fafbfc",
+        foreground: "#0f172a",
+        surface: "#ffffff",
+        border: {
+          DEFAULT: "#e2e8f0",
+          subtle: "#f1f5f9"
+        },
         primary: {
-          DEFAULT: "#6366f1",
-          foreground: "#f9fafb"
+          DEFAULT: "#4f46e5",
+          light: "#6366f1",
+          foreground: "#ffffff"
         },
         accent: {
-          DEFAULT: "#22d3ee",
-          foreground: "#020617"
+          DEFAULT: "#0ea5e9",
+          muted: "#e0f2fe"
         },
-        muted: "#020617"
+        muted: {
+          DEFAULT: "#64748b",
+          foreground: "#475569"
+        }
       },
       fontFamily: {
-        sans: ["system-ui", "ui-sans-serif", "sans-serif"]
+        sans: [
+          "Segoe UI",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "sans-serif"
+        ]
+      },
+      boxShadow: {
+        card: "0 1px 3px 0 rgb(15 23 42 / 0.04), 0 8px 24px -4px rgb(15 23 42 / 0.06)",
+        "card-hover":
+          "0 4px 12px 0 rgb(15 23 42 / 0.06), 0 16px 40px -8px rgb(79 70 229 / 0.12)",
+        soft: "0 2px 20px -2px rgb(15 23 42 / 0.08)"
       },
       backgroundImage: {
-        "hero-gradient":
-          "radial-gradient(circle at top left, rgba(94, 234, 212, 0.25), transparent 55%), radial-gradient(circle at top right, rgba(129, 140, 248, 0.3), transparent 55%), radial-gradient(circle at bottom, rgba(59, 130, 246, 0.35), transparent 60%)"
+        "hero-mesh":
+          "radial-gradient(ellipse 80% 60% at 50% -20%, rgba(99, 102, 241, 0.08), transparent), radial-gradient(ellipse 60% 50% at 100% 0%, rgba(14, 165, 233, 0.06), transparent), radial-gradient(ellipse 50% 40% at 0% 50%, rgba(99, 102, 241, 0.05), transparent)"
       }
     }
   },
@@ -35,4 +55,3 @@ const config: Config = {
 };
 
 export default config;
-

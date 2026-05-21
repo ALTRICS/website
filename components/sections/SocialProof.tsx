@@ -1,40 +1,71 @@
-import { Section } from "../layout/Section";
+import { Section } from "@/components/layout/Section";
+import { SectionHeader } from "@/components/ui/SectionHeader";
+import { trustItems } from "@/lib/content";
 
-const placeholders = ["Лого компании", "Лого компании", "Лого компании", "Лого компании", "Лого компании"];
+const caseStudyPlaceholder = {
+  problem: "Ручная обработка заявок и долгие ответы клиентам",
+  solution: "AI-ассистент с интеграцией в CRM и мессенджеры",
+  result: "Сокращение времени ответа и разгрузка команды"
+};
 
-// export function SocialProofSection() {
-//   return (
-//     <div className="bg-slate-950 py-14 sm:py-16">
-//       <Section id="social-proof">
-//         <div className="flex flex-col gap-8">
-//           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
-//             <div>
-//               <p className="text-xs font-medium uppercase tracking-[0.25em] text-slate-400">
-//                 Нам доверяют современные команды
-//               </p>
-//               { <p className="mt-3 text-sm text-slate-400">
-//                 Здесь будут логотипы клиентов из сфер продаж, логистики, e‑commerce,
-//                 услуг и производства.
-//               </p> }
-//             </div>
-//             <p className="text-xs text-slate-500">
-//               Работаем с малым и средним бизнесом по всей России.
-//             </p>
-//           </div>
+export function SocialProofSection() {
+  return (
+    <Section id="trust">
+      <SectionHeader
+        label="Доверие"
+        title="Почему с нами работают"
+        description="Фокус на практичном внедрении AI для малого и среднего бизнеса — с понятным результатом и поддержкой после запуска."
+        align="center"
+        className="mx-auto"
+      />
 
-//           { <div className="flex flex-wrap items-center justify-start gap-3 sm:gap-4">
-//             {placeholders.map((label, index) => (
-//               <div
-//                 key={`${label}-${index}`}
-//                 className="flex h-10 min-w-[120px] items-center justify-center rounded-full border border-slate-800/80 bg-slate-900/80 px-4 text-[0.7rem] font-medium uppercase tracking-[0.15em] text-slate-500"
-//               >
-//                 {label}
-//               </div>
-//             ))}
-//           </div> }
-//         </div>
-//       </Section>
-//     </div>
-//   );
-// }
+      <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {trustItems.map((item) => (
+          <div
+            key={item.title}
+            className="rounded-2xl border border-border bg-surface p-5 text-center shadow-card sm:text-left"
+          >
+            <h3 className="text-sm font-semibold text-foreground">
+              {item.title}
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              {item.description}
+            </p>
+          </div>
+        ))}
+      </div>
 
+      <div className="mt-12 rounded-2xl border border-dashed border-border bg-slate-50/80 p-6 sm:p-8">
+        <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted">
+          Кейсы — скоро
+        </p>
+        <div className="mt-6 grid gap-4 sm:grid-cols-3">
+          <div className="rounded-xl bg-white p-4 shadow-sm">
+            <p className="text-xs font-semibold uppercase text-primary">
+              Задача
+            </p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              {caseStudyPlaceholder.problem}
+            </p>
+          </div>
+          <div className="rounded-xl bg-white p-4 shadow-sm">
+            <p className="text-xs font-semibold uppercase text-primary">
+              Решение
+            </p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              {caseStudyPlaceholder.solution}
+            </p>
+          </div>
+          <div className="rounded-xl bg-white p-4 shadow-sm">
+            <p className="text-xs font-semibold uppercase text-primary">
+              Результат
+            </p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              {caseStudyPlaceholder.result}
+            </p>
+          </div>
+        </div>
+      </div>
+    </Section>
+  );
+}

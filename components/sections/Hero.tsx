@@ -1,199 +1,146 @@
- "use client";
+"use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { Button } from "@/components/ui/Button";
+import { Header } from "@/components/layout/Header";
 
-const stats = [
-  { label: "Экономия времени сотрудников", value: "50–80%" },
-  { label: "Ускорение процессов", value: "до 10 раз" },
-  { label: "Отрасли", value: "Продажи, логистика, e‑com" }
+const previewCards = [
+  {
+    title: "Персональный агент",
+    status: "Активен",
+    lines: ["План на сегодня готов", "Напоминание: встреча в 15:00"]
+  },
+  {
+    title: "Автоматизация заявок",
+    status: "12 обработано",
+    lines: ["Лид квалифицирован", "CRM обновлён"]
+  },
+  {
+    title: "Бизнес-ассистент",
+    status: "Team copilot",
+    lines: ["Ответ по регламенту", "Шаблон для отдела продаж"]
+  }
 ];
 
 export function Hero() {
   return (
-    <div className="relative overflow-hidden bg-hero-gradient pb-16 pt-10 sm:pb-24 sm:pt-16 lg:pb-32 lg:pt-20">
-      <div className="noise-bg pointer-events-none absolute inset-0 opacity-70" />
+    <div className="relative overflow-hidden bg-hero-mesh">
+      <Header />
 
-      <header className="relative mx-auto flex w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-3">
-          <Image
-            src="/logo.svg"
-            alt="ALTRICS"
-            width={160}
-            height={28}
-            priority
-            className="h-16 w-auto"
-          />
-        </div>
-        <div className="hidden items-center gap-4 text-xs font-medium text-slate-300/80 sm:flex">
-            <span className="rounded-full border border-white/10 bg-slate-900/40 px-3 py-1">
-              ИИ‑студия бизнес‑автоматизации
-            </span>
-            <span className="hidden text-slate-400 md:inline">
-              Для малого и среднего бизнеса
-            </span>
-        </div>
-      </header>
-
-      <main className="relative mx-auto mt-14 flex w-full max-w-6xl flex-col items-center gap-12 px-4 sm:mt-20 sm:px-6 lg:mt-24 lg:flex-row lg:items-start lg:gap-16 lg:px-8">
-        <div className="relative z-10 max-w-xl text-center lg:text-left">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-slate-950/50 px-3 py-1 text-xs font-medium text-slate-300 backdrop-blur"
-          >
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-            ИИ‑сотрудники, которые работают 24/7
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.05 }}
-            className="mt-6 text-balance text-4xl font-semibold tracking-tight text-slate-50 sm:text-5xl md:text-6xl"
-          >
-            Автоматизация процессов
-            <br />
-            для вашего бизнеса
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-            className="mt-6 text-balance text-base leading-relaxed text-slate-300 sm:text-lg"
-          >
-            Ускорьте приём заявок и обработку заказов{" "}
-            <strong>в 10 раз*</strong> с помощью искусственного интеллекта. Мы
-            создаём автоматизации, которые снимают ручную работу с вашей
-            команды, снижают затраты и повышают операционную эффективность.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
-            className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-start"
-          >
-            <a
-              href="#cta"
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-tr from-sky-400 via-indigo-500 to-violet-500 px-7 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-indigo-500/40 transition hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+      <div className="relative mx-auto w-full max-w-6xl px-4 pb-20 pt-10 sm:px-6 sm:pb-28 sm:pt-14 lg:px-8 lg:pb-32">
+        <div className="flex flex-col items-center gap-14 lg:flex-row lg:items-center lg:gap-16">
+          <div className="w-full max-w-xl text-center lg:text-left">
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-3 py-1 text-xs font-medium text-muted-foreground shadow-sm"
             >
-              Оставить заявку на автоматизацию
-            </a>
-            <p className="max-w-[13rem] text-xs text-slate-400">
-              Проанализируем процессы и запустим автоматизацию за недели, а не
-              месяцы.
-            </p>
-          </motion.div>
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+              AI для бизнеса в России и СНГ
+            </motion.div>
 
-          <motion.dl
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="mt-10 grid w-full grid-cols-2 gap-4 text-left sm:grid-cols-3"
+            <motion.h1
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.05 }}
+              className="mt-6 text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-[3.25rem] lg:leading-[1.1]"
+            >
+              AI-решения, которые упрощают бизнес
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="mt-6 text-balance text-base leading-relaxed text-muted-foreground sm:text-lg"
+            >
+              От персональных AI-агентов до автоматизации процессов и кастомных
+              систем на базе ChatGPT — мы создаём инструменты, которые делают
+              работу проще и эффективнее.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
+              className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-start"
+            >
+              <Button href="#cta" variant="primary" size="lg">
+                Получить консультацию
+              </Button>
+              <Button href="#capabilities" variant="secondary" size="lg">
+                Смотреть сценарии
+              </Button>
+            </motion.div>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mt-6 text-sm text-muted"
+            >
+              Экономим время, снижаем рутину и внедряем AI в ежедневные
+              процессы без лишней сложности.
+            </motion.p>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.98, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="relative w-full max-w-lg"
           >
-            {stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="rounded-2xl border border-white/10 bg-slate-950/40 px-4 py-3 text-sm text-slate-300 backdrop-blur"
-              >
-                <dt className="text-[0.72rem] uppercase tracking-wide text-slate-400">
-                  {stat.label}
-                </dt>
-                <dd className="mt-1 text-base font-semibold text-slate-50">
-                  {stat.value}
-                </dd>
-              </div>
-            ))}
-          </motion.dl>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 24 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-          className="relative z-10 w-full max-w-xl"
-        >
-          <div className="gradient-border relative overflow-hidden rounded-3xl bg-slate-950/70 p-[1px]">
-            <div className="relative h-full w-full rounded-[1.45rem] bg-slate-950/80 p-5 sm:p-6">
-              <div className="pointer-events-none absolute -inset-px rounded-[1.45rem] bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.1),transparent_55%),radial-gradient(circle_at_bottom,_rgba(129,140,248,0.2),transparent_55%)]" />
-
-              <div className="relative flex items-center justify-between gap-4">
-                <div>
-                  <p className="mt-1 text-sm font-semibold text-slate-50">
-                    Искуссственный интеллект берёт рутину на себя
-                  </p>
+            <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-indigo-100/80 via-white to-sky-100/60 blur-2xl" />
+            <div className="relative overflow-hidden rounded-2xl border border-border bg-white p-5 shadow-card sm:p-6">
+              <div className="flex items-center justify-between border-b border-border-subtle pb-4">
+                <div className="flex items-center gap-2">
+                  <div className="flex gap-1">
+                    <span className="h-2.5 w-2.5 rounded-full bg-slate-200" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-slate-200" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-slate-200" />
+                  </div>
+                  <span className="text-xs font-medium text-muted">
+                    altrics workspace
+                  </span>
                 </div>
-                <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/15 px-3 py-1 text-[0.7rem] font-medium text-emerald-300 ring-1 ring-emerald-400/40">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
-                  Online 24/7
+                <span className="rounded-full bg-emerald-50 px-2.5 py-0.5 text-[0.65rem] font-medium text-emerald-700">
+                  Online
                 </span>
               </div>
 
-              <div className="mt-6 grid grid-cols-2 gap-3 text-xs text-slate-200 sm:text-sm">
-                <VisualCard
-                  title="Отдел продаж"
-                  items={[
-                    "Автоматическая квалификация лидов",
-                    "Подготовка коммерческих предложений",
-                    "Напоминания и дожим без задержек"
-                  ]}
-                />
-                <VisualCard
-                  title="Заказы и логистика"
-                  items={[
-                    "Расчёт заказов за секунды",
-                    "Формирование документов",
-                    "Синхронизация систем"
-                  ]}
-                />
-                <VisualCard
-                  title="Поддержка"
-                  items={[
-                    "Мгновенные ответы клиентам",
-                   
-                    "Понимание сложных запросов"
-                  ]}
-                />
-                <VisualCard
-                  title="Бэк‑офис"
-                  items={[
-                    "Обработка документов",
-                    "Подготовка отчётности",
-                    "Обновление CRM и таблиц"
-                  ]}
-                />
+              <div className="mt-4 space-y-3">
+                {previewCards.map((card) => (
+                  <div
+                    key={card.title}
+                    className="rounded-xl border border-border-subtle bg-slate-50/80 p-3 transition-shadow hover:shadow-sm"
+                  >
+                    <div className="flex items-center justify-between">
+                      <p className="text-xs font-semibold text-foreground">
+                        {card.title}
+                      </p>
+                      <span className="text-[0.65rem] text-primary">
+                        {card.status}
+                      </span>
+                    </div>
+                    <ul className="mt-2 space-y-1">
+                      {card.lines.map((line) => (
+                        <li
+                          key={line}
+                          className="flex items-center gap-2 text-[0.7rem] text-muted-foreground"
+                        >
+                          <span className="h-1 w-1 rounded-full bg-primary/60" />
+                          {line}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
-        </motion.div>
-      </main>
+          </motion.div>
+        </div>
+      </div>
     </div>
   );
 }
-
-type VisualCardProps = {
-  title: string;
-  items: string[];
-};
-
-function VisualCard({ title, items }: VisualCardProps) {
-  return (
-    <div className="flex flex-col gap-1.5 rounded-2xl border border-slate-700/60 bg-slate-900/70 p-3 shadow-[0_0_0_1px_rgba(15,23,42,0.7)]">
-      <p className="text-[0.7rem] font-semibold uppercase tracking-wide text-slate-300">
-        {title}
-      </p>
-      <ul className="space-y-1 text-[0.7rem] text-slate-400">
-        {items.map((item) => (
-          <li key={item} className="flex items-start gap-1.5">
-            <span className="mt-[0.3rem] h-1 w-1 rounded-full bg-sky-400" />
-            <span>{item}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
