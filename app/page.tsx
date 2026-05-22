@@ -2,7 +2,7 @@ import { Hero } from "@/components/sections/Hero";
 import { DirectionsSection } from "@/components/sections/Directions";
 import { CapabilitiesSection } from "@/components/sections/Capabilities";
 import { IndustriesSection } from "@/components/sections/Industries";
-import { WhatWeBuildSection } from "@/components/sections/WhatWeBuild";
+import { PlatformSection } from "@/components/sections/Platform";
 import { BenefitsSection } from "@/components/sections/Benefits";
 import { HowItWorksSection } from "@/components/sections/HowItWorks";
 import { SocialProofSection } from "@/components/sections/SocialProof";
@@ -14,9 +14,9 @@ export default function HomePage() {
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Hero />
       <DirectionsSection />
-      <CapabilitiesSection />
+      <PlatformSection />
       <IndustriesSection />
-      <WhatWeBuildSection />
+      <CapabilitiesSection />
       <BenefitsSection />
       <HowItWorksSection />
       <SocialProofSection />

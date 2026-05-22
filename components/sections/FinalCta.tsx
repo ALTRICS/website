@@ -10,12 +10,12 @@ export function FinalCtaSection() {
 
         <div className="relative max-w-2xl">
           <h2 className="text-balance text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-            Давайте автоматизируем ваш бизнес с помощью AI
+            Давайте найдём процесс, который можно автоматизировать
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-            Расскажите о задаче — мы предложим практичное AI-решение: от
-            персонального ассистента до бизнес-автоматизаций и кастомных
-            инструментов на базе ChatGPT.
+            Расскажите, где ваша команда тратит время: заявки, ответы клиентам,
+            запись, поддержка, статусы, документы или ручная передача данных. Мы
+            предложим AI-сценарий и понятный первый шаг для внедрения.
           </p>
         </div>
 
@@ -25,7 +25,7 @@ export function FinalCtaSection() {
             variant="primary"
             size="lg"
           >
-            Обсудить проект
+            Обсудить задачу
           </Button>
           <Button
             href="https://t.me/+N573lsg4kWgwNGRi"

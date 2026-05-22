@@ -7,8 +7,8 @@ export function CapabilitiesSection() {
     <Section id="capabilities" alt>
       <SectionHeader
         label="Сценарии"
-        title="Покрываем широкий спектр бизнес-задач"
-        description="Если в компании есть повторяющийся процесс, узкое место в коммуникации или операционная рутина — скорее всего, мы сможем автоматизировать или улучшить это с помощью AI."
+        title="С чего обычно начинаем автоматизацию"
+        description="Лучше всего AI работает там, где есть повторяющиеся обращения, типовые ответы, заявки, статусы, записи, консультации или ручная передача данных между сервисами."
       />
 
       <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -36,12 +36,6 @@ export function CapabilitiesSection() {
           </div>
         ))}
       </div>
-
-      <p className="mt-10 rounded-2xl border border-primary/15 bg-indigo-50/50 px-5 py-4 text-center text-sm leading-relaxed text-foreground sm:text-base">
-        Работаем с почти любым сценарием AI-автоматизации или ассистента, который
-        повышает удобство, скорость, качество сервиса или эффективность — для
-        компаний в России и странах СНГ.
-      </p>
     </Section>
   );
 }

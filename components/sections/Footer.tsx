@@ -4,7 +4,7 @@ const footerLinks = [
   { href: "#directions", label: "Направления" },
   { href: "#capabilities", label: "Сценарии" },
   { href: "#industries", label: "Отрасли" },
-  { href: "#what-we-build", label: "Форматы" },
+  { href: "#platform", label: "Платформа" },
   { href: "#how-it-works", label: "Как работаем" },
   { href: "#cta", label: "Контакты" }
 ];
@@ -23,9 +23,9 @@ export function Footer() {
               className="h-7 w-auto"
             />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Altrics создаёт AI-решения и автоматизации для малого и среднего
-              бизнеса в России и СНГ — от персональных агентов до кастомных
-              бизнес-систем на базе ChatGPT.
+              Altrics помогает малому и среднему бизнесу автоматизировать
+              заявки, коммуникации и повторяющиеся процессы с помощью AI-ботов,
+              интеграций и внутренних ассистентов для команды.
             </p>
             <p className="mt-6 text-xs text-muted">
               © {new Date().getFullYear()} altrics. Все права защищены.

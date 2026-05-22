@@ -13,8 +13,8 @@ export function IndustriesSection() {
     <Section id="industries">
       <SectionHeader
         label="Отрасли"
-        title="Решения под вашу отрасль"
-        description="Подбираем сценарии под специфику бизнеса — от логистики и туризма до салонов, e-commerce и консалтинга."
+        title="Адаптируем AI-сценарии под вашу сферу"
+        description="Платформа остаётся единой: заявки, клиенты, диалоги, AI-боты, база знаний и аналитика. Под каждую отрасль меняются сценарии, статусы, поля заявки, инструкции AI и интеграции."
       />
 
       <div className="mt-10 flex flex-col gap-8 lg:flex-row">
@@ -52,7 +52,7 @@ export function IndustriesSection() {
             {active.name}
           </h3>
           <p className="mt-2 text-sm text-muted-foreground">
-            Примеры решений, которые мы можем внедрить в вашей отрасли:
+            Примеры сценариев, с которых обычно начинаем в этой сфере:
           </p>
           <ul className="mt-6 grid gap-3 sm:grid-cols-2">
             {active.examples.map((example) => (
