@@ -1,13 +1,6 @@
 import Image from "next/image";
-
-const footerLinks = [
-  { href: "#directions", label: "Направления" },
-  { href: "#capabilities", label: "Сценарии" },
-  { href: "#industries", label: "Отрасли" },
-  { href: "#platform", label: "Платформа" },
-  { href: "#how-it-works", label: "Как работаем" },
-  { href: "#cta", label: "Контакты" }
-];
+import Link from "next/link";
+import { CONTACT_EMAIL, footerNavLinks, TELEGRAM_URL } from "@/lib/constants";
 
 export function Footer() {
   return (
@@ -37,15 +30,25 @@ export function Footer() {
               Навигация
             </p>
             <nav className="mt-4 flex flex-col gap-2">
-              {footerLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                >
-                  {link.label}
-                </a>
-              ))}
+              {footerNavLinks.map((link) => {
+                const isInternalPage = link.href.startsWith("/");
+                const className =
+                  "text-sm text-muted-foreground transition-colors hover:text-foreground";
+
+                if (isInternalPage) {
+                  return (
+                    <Link key={link.href} href={link.href} className={className}>
+                      {link.label}
+                    </Link>
+                  );
+                }
+
+                return (
+                  <a key={link.href} href={link.href} className={className}>
+                    {link.label}
+                  </a>
+                );
+              })}
             </nav>
           </div>
 
@@ -55,13 +58,13 @@ export function Footer() {
             </p>
             <div className="mt-4 flex flex-col gap-3">
               <a
-                href="mailto:contact@altrics.tech"
+                href={`mailto:${CONTACT_EMAIL}`}
                 className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
               >
-                contact@altrics.tech
+                {CONTACT_EMAIL}
               </a>
               <a
-                href="https://t.me/+N573lsg4kWgwNGRi"
+                href={TELEGRAM_URL}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"

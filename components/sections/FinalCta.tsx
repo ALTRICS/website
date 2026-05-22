@@ -1,5 +1,9 @@
+"use client";
+
 import { Section } from "@/components/layout/Section";
 import { Button } from "@/components/ui/Button";
+import { RequestCtaButton } from "@/components/ui/RequestCtaButton";
+import { TELEGRAM_URL } from "@/lib/constants";
 
 export function FinalCtaSection() {
   return (
@@ -20,15 +24,11 @@ export function FinalCtaSection() {
         </div>
 
         <div className="relative mt-8 flex flex-col items-center gap-3 sm:flex-row lg:mt-8">
-          <Button
-            href="mailto:contact@altrics.tech?subject=Обсуждение%20AI-проекта"
-            variant="primary"
-            size="lg"
-          >
+          <RequestCtaButton variant="primary" size="lg">
             Обсудить задачу
-          </Button>
+          </RequestCtaButton>
           <Button
-            href="https://t.me/+N573lsg4kWgwNGRi"
+            href={TELEGRAM_URL}
             variant="secondary"
             size="lg"
             target="_blank"

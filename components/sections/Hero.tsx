@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
+import { RequestCtaButton } from "@/components/ui/RequestCtaButton";
 import { Header } from "@/components/layout/Header";
 
 const previewCards = [
@@ -67,9 +68,9 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.15 }}
               className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-start"
             >
-              <Button href="#cta" variant="primary" size="lg">
+              <RequestCtaButton variant="primary" size="lg">
                 Обсудить задачу
-              </Button>
+              </RequestCtaButton>
               <Button href="#capabilities" variant="secondary" size="lg">
                 Посмотреть сценарии
               </Button>
@@ -82,7 +83,7 @@ export function Hero() {
               className="mt-6 text-sm text-muted"
             >
               Telegram-боты, AI-ответы на заявки и n8n-автоматизации — сейчас.
-              Единый кабинет для заявок, клиентов и аналитики — в разработке.
+              Единый кабинет для заявок, клиентов и аналитики — в развитии.
             </motion.p>
           </div>
 

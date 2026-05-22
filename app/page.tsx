@@ -6,6 +6,8 @@ import { PlatformSection } from "@/components/sections/Platform";
 import { BenefitsSection } from "@/components/sections/Benefits";
 import { HowItWorksSection } from "@/components/sections/HowItWorks";
 import { SocialProofSection } from "@/components/sections/SocialProof";
+import { GrowthPathSection } from "@/components/sections/GrowthPath";
+import { LaunchFormatsSection } from "@/components/sections/LaunchFormats";
 import { FinalCtaSection } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/sections/Footer";
 
@@ -20,6 +22,8 @@ export default function HomePage() {
       <BenefitsSection />
       <HowItWorksSection />
       <SocialProofSection />
+      <GrowthPathSection />
+      <LaunchFormatsSection />
       <FinalCtaSection />
       <Footer />
     </div>
