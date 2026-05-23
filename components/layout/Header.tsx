@@ -43,7 +43,7 @@ export function Header() {
         <div className="hidden items-center gap-3 sm:flex">
           <Button href={LOGIN_PATH} variant="ghost" size="sm">
             Войти
-          </Button>
+          </Button> 
           <RequestCtaButton variant="primary" size="sm">
             Обсудить задачу
           </RequestCtaButton>
