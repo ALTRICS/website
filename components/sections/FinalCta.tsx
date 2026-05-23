@@ -14,7 +14,7 @@ export function FinalCtaSection() {
 
         <div className="relative max-w-2xl">
           <h2 className="text-balance text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-            Давайте найдём процесс, который можно автоматизировать
+            Найдём процесс, который можно автоматизировать
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
             Расскажите, где ваша команда тратит время: заявки, ответы клиентам,

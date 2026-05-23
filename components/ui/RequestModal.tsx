@@ -130,7 +130,7 @@ export function RequestModal({ isOpen, onClose }: RequestModalProps) {
               Обсудить задачу
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Расскажите о процессе — мы предложим первый AI-сценарий и план
+              Расскажите о процессе и мы предложим первый AI-сценарий и план
               запуска. Платформа подключается после настройки первого сценария.
             </p>
 

@@ -7,7 +7,7 @@ import { Header } from "@/components/layout/Header";
 
 const previewCards = [
   {
-    title: "AI-бот заявок",
+    title: "AI-бот для заявок",
     status: "3 новых диалога",
     lines: ["Контакты собраны", "Лид передан менеджеру"]
   },
@@ -38,7 +38,7 @@ export function Hero() {
               className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-3 py-1 text-xs font-medium text-muted-foreground shadow-sm"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              AI-автоматизация для МСБ
+              AI-автоматизация для бизнеса
             </motion.div>
 
             <motion.h1
@@ -82,8 +82,8 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mt-6 text-sm text-muted"
             >
-              Telegram-боты, AI-ответы на заявки и n8n-автоматизации — сейчас.
-              Единый кабинет для заявок, клиентов и аналитики — в развитии.
+              Уже есть Telegram-боты, AI-ответы на заявки и n8n-автоматизации.
+              Единый кабинет для заявок, клиентов и аналитики – в развитии.
             </motion.p>
           </div>
 
@@ -103,7 +103,7 @@ export function Hero() {
                     <span className="h-2.5 w-2.5 rounded-full bg-slate-200" />
                   </div>
                   <span className="text-xs font-medium text-muted">
-                    altrics workspace
+                    рабочее пространство altrics
                   </span>
                 </div>
                 <span className="rounded-full bg-emerald-50 px-2.5 py-0.5 text-[0.65rem] font-medium text-emerald-700">

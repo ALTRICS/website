@@ -8,7 +8,7 @@ export function HowItWorksSection() {
       <SectionHeader
         label="Процесс"
         title="Как мы работаем"
-        description="Прозрачный процесс от анализа до запуска. Каждое решение адаптируем под ваш бизнес — это не готовый шаблонный продукт."
+        description="Прозрачный процесс от анализа до запуска. Каждое решение адаптируем под ваш бизнес."
       />
 
       <ol className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
