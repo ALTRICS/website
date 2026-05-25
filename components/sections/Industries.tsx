@@ -3,19 +3,30 @@
 import { useState } from "react";
 import { Section } from "@/components/layout/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { industries } from "@/lib/content";
+import {
+  featuredIndustries,
+  industries,
+  secondaryIndustriesNote
+} from "@/lib/content";
 
 export function IndustriesSection() {
-  const [activeId, setActiveId] = useState(industries[0].id);
-  const active = industries.find((i) => i.id === activeId) ?? industries[0];
+  const [activeId, setActiveId] = useState(featuredIndustries[0].id);
+  const active =
+    industries.find((i) => i.id === activeId) ?? featuredIndustries[0];
 
   return (
-    <Section id="industries">
+    <Section id="industries" alt>
       <SectionHeader
         label="Отрасли"
         title="Адаптируем AI-сценарии под вашу сферу"
-        description="Платформа остаётся единой: заявки, клиенты, диалоги, AI-боты, база знаний и аналитика. Под каждую отрасль меняются сценарии, статусы, поля заявки, инструкции AI и интеграции."
+        description="Платформа и подход остаются едиными: заявки, клиенты, диалоги, AI-боты, база знаний и аналитика. Под каждую отрасль меняются сценарии, статусы, поля заявки, инструкции AI и интеграции."
       />
+
+      <p className="mt-6 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+        Один бизнес использует altrics для подбора туров, другой – для
+        обработки транспортных заявок, третий – для записи клиентов в салон.
+        Ядро одно, настройки разные.
+      </p>
 
       <div className="mt-10 flex flex-col gap-8 lg:flex-row">
         <div
@@ -23,7 +34,7 @@ export function IndustriesSection() {
           role="tablist"
           aria-label="Отрасли"
         >
-          {industries.map((industry) => {
+          {featuredIndustries.map((industry) => {
             const isActive = industry.id === activeId;
             return (
               <button
@@ -51,8 +62,8 @@ export function IndustriesSection() {
           <h3 className="text-xl font-semibold text-foreground">
             {active.name}
           </h3>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Примеры сценариев, с которых обычно начинаем в этой сфере:
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+            {active.description}
           </p>
           <ul className="mt-6 grid gap-3 sm:grid-cols-2">
             {active.examples.map((example) => (
@@ -69,6 +80,10 @@ export function IndustriesSection() {
           </ul>
         </div>
       </div>
+
+      <p className="mt-8 text-center text-sm text-muted-foreground">
+        {secondaryIndustriesNote}
+      </p>
     </Section>
   );
 }

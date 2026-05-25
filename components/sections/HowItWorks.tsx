@@ -7,7 +7,7 @@ export function HowItWorksSection() {
     <Section id="how-it-works" alt>
       <SectionHeader
         label="Процесс"
-        title="Как мы работаем"
+        title="Как внедряем"
         description="Прозрачный процесс от анализа до запуска. Каждое решение адаптируем под ваш бизнес."
       />
 

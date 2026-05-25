@@ -18,7 +18,7 @@ export function Footer() {
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
               Altrics помогает малому и среднему бизнесу автоматизировать
               заявки, коммуникации и повторяющиеся процессы с помощью AI-ботов,
-              интеграций и внутренних ассистентов для команды.
+              n8n-интеграций и внутренних ассистентов для команды.
             </p>
             <p className="mt-6 text-xs text-muted">
               © {new Date().getFullYear()} altrics. Все права защищены.

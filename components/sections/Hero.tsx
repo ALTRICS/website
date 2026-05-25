@@ -38,7 +38,7 @@ export function Hero() {
               className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-3 py-1 text-xs font-medium text-muted-foreground shadow-sm"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              AI-автоматизация для бизнеса
+              AI для малого и среднего бизнеса в России и СНГ
             </motion.div>
 
             <motion.h1
@@ -56,10 +56,10 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="mt-6 text-balance text-base leading-relaxed text-muted-foreground sm:text-lg"
             >
-              Внедряем AI-ботов, быстрые ответы на заявки, автоматизации через
-              n8n и интеграции с вашими рабочими процессами. Помогаем бизнесу
-              быстрее отвечать клиентам, меньше терять заявки и разгружать
-              команду от рутины.
+              Внедряем Telegram-ботов, AI-ответы на заявки, n8n-автоматизации и
+              интеграции с вашими рабочими процессами. Помогаем бизнесу быстрее
+              отвечать клиентам, меньше терять обращения и разгружать команду от
+              рутины.
             </motion.p>
 
             <motion.div
@@ -82,8 +82,8 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mt-6 text-sm text-muted"
             >
-              Уже есть Telegram-боты, AI-ответы на заявки и n8n-автоматизации.
-              Единый кабинет для заявок, клиентов и аналитики – в развитии.
+              Начинаем с конкретного процесса: заявки, консультации, записи,
+              поддержки или обработки обращений.
             </motion.p>
           </div>
 

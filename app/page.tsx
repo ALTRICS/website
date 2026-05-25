@@ -16,14 +16,14 @@ export default function HomePage() {
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <Hero />
       <DirectionsSection />
-      <PlatformSection />
-      <IndustriesSection />
       <CapabilitiesSection />
+      <IndustriesSection />
       <BenefitsSection />
       <HowItWorksSection />
       <SocialProofSection />
       <GrowthPathSection />
       <LaunchFormatsSection />
+      <PlatformSection />
       <FinalCtaSection />
       <Footer />
     </div>

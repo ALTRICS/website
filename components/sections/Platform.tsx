@@ -1,19 +1,29 @@
 import { Section } from "@/components/layout/Section";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { platformConnectNote, platformModules } from "@/lib/content";
+import {
+  platformFooterNote,
+  platformIntro,
+  platformModules
+} from "@/lib/content";
 
 export function PlatformSection() {
   return (
-    <Section id="platform" alt>
+    <Section id="platform">
       <SectionHeader
-        label="Платформа"
-        title="Платформа altrics"
-        description="Сейчас мы запускаем AI-ботов и автоматизации под конкретные процессы бизнеса. Следующий шаг – единый кабинет, где компания сможет видеть обращения, клиентов, статусы, AI-ботов, базу знаний и аналитику."
+        label="Кабинет"
+        title="Личный кабинет для управления AI-автоматизацией"
       />
 
-      <p className="mt-6 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-        {platformConnectNote}
-      </p>
+      <div className="mt-6 max-w-3xl space-y-4">
+        {platformIntro.map((paragraph) => (
+          <p
+            key={paragraph.slice(0, 40)}
+            className="text-sm leading-relaxed text-muted-foreground sm:text-base"
+          >
+            {paragraph}
+          </p>
+        ))}
+      </div>
 
       <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {platformModules.map((module) => (
@@ -31,9 +41,8 @@ export function PlatformSection() {
         ))}
       </div>
 
-      <p className="mt-8 text-sm text-muted">
-        Функционал кабинета развивается поэтапно – подключаем модули по мере
-        настройки ваших процессов.
+      <p className="mt-8 text-sm leading-relaxed text-muted-foreground">
+        {platformFooterNote}
       </p>
     </Section>
   );
