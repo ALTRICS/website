@@ -17,13 +17,13 @@ export default function HomePage() {
       <Hero />
       <DirectionsSection />
       <CapabilitiesSection />
-      <IndustriesSection />
       <BenefitsSection />
       <HowItWorksSection />
       <SocialProofSection />
       <GrowthPathSection />
       <LaunchFormatsSection />
       <PlatformSection />
+      <IndustriesSection />
       <FinalCtaSection />
       <Footer />
     </div>

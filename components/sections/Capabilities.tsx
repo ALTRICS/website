@@ -46,7 +46,7 @@ export function CapabilitiesSection() {
           className="flex w-full items-center justify-between rounded-xl border border-border bg-slate-50/80 px-4 py-3 text-left text-sm font-medium text-foreground transition-colors hover:bg-slate-50 sm:w-auto sm:min-w-[200px]"
           aria-expanded={expanded}
         >
-          Ещё сценарии
+          Показать дополнительные сценарии
           <svg
             className={`ml-3 h-4 w-4 shrink-0 text-muted transition-transform ${expanded ? "rotate-180" : ""}`}
             fill="none"

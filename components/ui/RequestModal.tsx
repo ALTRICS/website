@@ -131,7 +131,7 @@ export function RequestModal({ isOpen, onClose }: RequestModalProps) {
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
               Расскажите о процессе и мы предложим первый AI-сценарий и план
-              запуска. Платформа подключается после настройки первого сценария.
+              запуска. Кабинет подключается только если он нужен задаче.
             </p>
 
             <form onSubmit={handleSubmit} className="mt-6 space-y-4">

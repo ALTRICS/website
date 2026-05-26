@@ -13,14 +13,14 @@ export function LaunchFormatsSection() {
       <SectionHeader
         label="Запуск"
         title="Форматы запуска"
-        description="Начинаем с понятного сценария и расширяем решение по мере результата. Стоимость запуска зависит от задачи, количества каналов, интеграций, базы знаний и уровня автоматизации. Поддержка после запуска подключается отдельно."
+        description="Начинаем с понятного сценария: бот, заявки, ответы клиентам, интеграции или личный кабинет. Стоимость запуска зависит от задачи, каналов, базы знаний и уровня автоматизации."
       />
 
       <div className="mt-12 grid gap-6 lg:grid-cols-3">
         {launchFormats.map((format, index) => (
           <article
             key={format.id}
-            className="flex flex-col rounded-2xl border border-border bg-surface p-6 shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/20 hover:shadow-card-hover"
+            className="flex h-full flex-col rounded-2xl border border-border bg-surface p-6 shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/20 hover:shadow-card-hover"
           >
             <div className="flex items-start justify-between gap-4">
               <h3 className="text-lg font-semibold text-foreground">
@@ -46,7 +46,7 @@ export function LaunchFormatsSection() {
 
             <div className="mt-5 border-t border-border-subtle pt-5">
               <p className="text-xs font-semibold uppercase tracking-wide text-foreground">
-                Что входит в запуск
+                Что входит
               </p>
               <ul className="mt-3 flex flex-col gap-2">
                 {format.includes.map((item) => (
@@ -63,31 +63,14 @@ export function LaunchFormatsSection() {
 
             <div className="mt-5 border-t border-border-subtle pt-5">
               <p className="text-xs font-semibold uppercase tracking-wide text-foreground">
-                Что может входить в поддержку
-              </p>
-              <ul className="mt-3 flex flex-col gap-2">
-                {format.supportIncludes.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-2 text-sm text-muted-foreground"
-                  >
-                    <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-300" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="mt-5 border-t border-border-subtle pt-5">
-              <p className="text-xs font-semibold uppercase tracking-wide text-foreground">
-                Примеры клиентов
+                Кому подходит
               </p>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {format.clientExamples.join(" · ")}
+                {format.clientExamples.join(", ")}
               </p>
             </div>
 
-            <div className="mt-6">
+            <div className="mt-auto pt-6">
               <RequestCtaButton variant="secondary" size="md" className="w-full">
                 {format.cta}
               </RequestCtaButton>
