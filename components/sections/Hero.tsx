@@ -7,19 +7,19 @@ import { Header } from "@/components/layout/Header";
 
 const previewCards = [
   {
-    title: "AI-бот для заявок",
-    status: "3 новых диалога",
-    lines: ["Контакты собраны", "Лид передан менеджеру"]
+    title: "Новая заявка",
+    status: "3 новых обращения",
+    lines: ["Контакт клиента сохранён", "Вопрос передан менеджеру"]
   },
   {
-    title: "Автоматизация",
-    status: "n8n · CRM",
-    lines: ["Заявка создана в CRM", "Уведомление команде"]
+    title: "Ответ клиенту",
+    status: "Ответ готов",
+    lines: ["Частый вопрос обработан", "Клиент получил быстрый ответ"]
   },
   {
-    title: "Внутренний ассистент",
-    status: "База знаний",
-    lines: ["Ответ по регламенту", "Шаблон для отдела продаж"]
+    title: "Помощник для команды",
+    status: "В работе",
+    lines: ["Подсказал ответ менеджеру", "Напомнил о клиенте"]
   }
 ];
 
@@ -38,7 +38,7 @@ export function Hero() {
               className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-3 py-1 text-xs font-medium text-muted-foreground shadow-sm"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              AI для малого и среднего бизнеса в России и СНГ
+              Для малого и среднего бизнеса в России и СНГ
             </motion.div>
 
             <motion.h1
@@ -47,7 +47,7 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.05 }}
               className="mt-6 text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-[3.25rem] lg:leading-[1.1]"
             >
-              AI-автоматизация заявок, клиентов и коммуникаций для бизнеса
+              AI-система для заявок, клиентов и коммуникаций
             </motion.h1>
 
             <motion.p
@@ -56,10 +56,7 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="mt-6 text-balance text-base leading-relaxed text-muted-foreground sm:text-lg"
             >
-              Внедряем Telegram-ботов, AI-ответы на заявки, n8n-автоматизации и
-              интеграции с вашими рабочими процессами. Помогаем бизнесу быстрее
-              отвечать клиентам, меньше терять обращения и разгружать команду от
-              рутины.
+              Создаём AI-помощников и рабочие сценарии, которые помогают бизнесу быстрее отвечать клиентам, собирать заявки, контролировать обращения и разгружать команду от повторяющихся задач.
             </motion.p>
 
             <motion.div
@@ -72,7 +69,7 @@ export function Hero() {
                 Обсудить задачу
               </RequestCtaButton>
               <Button href="#capabilities" variant="secondary" size="lg">
-                Посмотреть сценарии
+                Что можно автоматизировать
               </Button>
             </motion.div>
 
@@ -82,8 +79,8 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mt-6 text-sm text-muted"
             >
-              Начинаем с конкретного процесса: заявки, консультации, записи,
-              поддержки или обработки обращений.
+              Начинаем с одной понятной задачи: быстрее отвечать, принимать
+              заявки, записывать клиентов или разгрузить менеджеров.
             </motion.p>
           </div>
 
