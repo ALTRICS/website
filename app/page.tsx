@@ -22,9 +22,9 @@ export default function HomePage() {
       <BenefitsSection />
       <HowItWorksSection />
       <PlatformSection />
-      <GrowthPathSection />
+      {/* <GrowthPathSection /> */}
       <LaunchFormatsSection />
-      <SocialProofSection />
+      {/* <SocialProofSection /> */}
       <FinalCtaSection />
       <Footer />
     </div>
