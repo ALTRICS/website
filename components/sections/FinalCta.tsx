@@ -33,7 +33,7 @@ export function FinalCtaSection() {
             variant="secondary"
             size="lg"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Написать в Telegram
           </Button>

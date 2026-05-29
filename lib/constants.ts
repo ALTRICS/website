@@ -1,7 +1,8 @@
 export const APP_URL =
   process.env.NEXT_PUBLIC_APP_URL ?? "https://app.altrics.tech";
 
-export const TELEGRAM_URL = "https://t.me/+N573lsg4kWgwNGRi";
+export const TELEGRAM_URL =
+  process.env.NEXT_PUBLIC_TELEGRAM_URL ?? "https://t.me/altrics";
 
 export const LOGIN_PATH = "/login";
 
