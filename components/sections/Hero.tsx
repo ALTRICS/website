@@ -7,19 +7,19 @@ import { Header } from "@/components/layout/Header";
 
 const previewCards = [
   {
-    title: "Новая заявка",
-    status: "3 новых обращения",
-    lines: ["Контакт клиента сохранён", "Вопрос передан менеджеру"]
+    title: "Единый Inbox",
+    status: "3 новых",
+    lines: ["Новое обращение из Telegram", "Контакт сохранён, заявка создана"]
   },
   {
-    title: "Ответ клиенту",
+    title: "База знаний",
     status: "Ответ готов",
-    lines: ["Частый вопрос обработан", "Клиент получил быстрый ответ"]
+    lines: ["ИИ подготовил ответ по регламенту", "Использована подтверждённая информация компании"]
   },
   {
-    title: "Помощник для команды",
-    status: "В работе",
-    lines: ["Подсказал ответ менеджеру", "Напомнил о клиенте"]
+    title: "Передача менеджеру",
+    status: "Нужен ответ",
+    lines: ["Сложный вопрос передан сотруднику", "Контекст диалога сохранён"]
   }
 ];
 
@@ -38,7 +38,7 @@ export function Hero() {
               className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-3 py-1 text-xs font-medium text-muted-foreground shadow-sm"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              Для малого и среднего бизнеса в России и СНГ
+              ИИ-операционная среда для бизнеса в России и СНГ
             </motion.div>
 
             <motion.h1
@@ -47,7 +47,7 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.05 }}
               className="mt-6 text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-[3.25rem] lg:leading-[1.1]"
             >
-              AI-система для заявок, клиентов и коммуникаций
+              ИИ-операционная среда для работы с клиентами под ключ
             </motion.h1>
 
             <motion.p
@@ -56,7 +56,7 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="mt-6 text-balance text-base leading-relaxed text-muted-foreground sm:text-lg"
             >
-              Создаём AI-помощников и рабочие сценарии, которые помогают бизнесу быстрее отвечать клиентам, собирать заявки, контролировать обращения и разгружать команду от повторяющихся задач.
+              Вместо набора разрозненных чат-ботов вы получаете единую систему. Мы помогаем собрать базу знаний компании, настраиваем ИИ-агентов и подключаем их к обращениям на сайте и в мессенджерах - с контролем, аналитикой и передачей сложных вопросов менеджеру.
             </motion.p>
 
             <motion.div
@@ -68,8 +68,8 @@ export function Hero() {
               <RequestCtaButton variant="primary" size="lg">
                 Обсудить задачу
               </RequestCtaButton>
-              <Button href="#capabilities" variant="secondary" size="lg">
-                Что можно автоматизировать
+              <Button href="#interface" variant="secondary" size="lg">
+                Посмотреть демо кабинета
               </Button>
             </motion.div>
 
@@ -79,8 +79,7 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mt-6 text-sm text-muted"
             >
-              Начинаем с одной понятной задачи: быстрее отвечать, принимать
-              заявки, записывать клиентов или разгрузить менеджеров.
+              Первый рабочий сценарий запускаем от 7 дней. Итоговый срок зависит от каналов, интеграций и готовности материалов компании.
             </motion.p>
           </div>
 
@@ -100,7 +99,7 @@ export function Hero() {
                     <span className="h-2.5 w-2.5 rounded-full bg-slate-200" />
                   </div>
                   <span className="text-xs font-medium text-muted">
-                    рабочее пространство altrics
+                    операционная среда altrics
                   </span>
                 </div>
                 <span className="rounded-full bg-emerald-50 px-2.5 py-0.5 text-[0.65rem] font-medium text-emerald-700">

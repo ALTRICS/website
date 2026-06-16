@@ -10,6 +10,7 @@ type LeadPayload = {
   page?: unknown;
   createdAt?: unknown;
   website?: unknown;
+  selectedPlan?: unknown;
   utm_source?: unknown;
   utm_medium?: unknown;
   utm_campaign?: unknown;
@@ -34,6 +35,7 @@ type Lead = {
   contact: string;
   page: string;
   createdAt: string;
+  selectedPlan: string;
   utm: UTM;
 };
 
@@ -86,6 +88,7 @@ export async function POST(request: Request) {
     contact,
     page: toCleanString(payload.page) || "landing",
     createdAt: toIsoDate(payload.createdAt),
+    selectedPlan: toCleanString(payload.selectedPlan),
     utm: normalizeUtm(payload)
   };
 
@@ -149,6 +152,10 @@ function formatLeadMessage(lead: Lead) {
   const empty = "не указано";
   const emptyUtm = "-";
 
+  const selectedPlan = lead.selectedPlan
+    ? `\nВыбранный тариф: ${lead.selectedPlan}\n`
+    : "";
+
   return [
     "Новая заявка с сайта altrics",
     "",
@@ -159,7 +166,7 @@ function formatLeadMessage(lead: Lead) {
     `Что хочет автоматизировать: ${lead.automationGoal || empty}`,
     "",
     `Контакт: ${lead.contact}`,
-    "",
+    selectedPlan,
     `Страница: ${lead.page}`,
     `Дата: ${lead.createdAt}`,
     "",

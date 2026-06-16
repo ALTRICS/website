@@ -12,8 +12,10 @@ import { RequestModal } from "@/components/ui/RequestModal";
 
 type RequestModalContextValue = {
   openRequestModal: () => void;
+  openRequestModalWithPlan: (plan: string) => void;
   closeRequestModal: () => void;
   isOpen: boolean;
+  selectedPlan: string;
 };
 
 const RequestModalContext = createContext<RequestModalContextValue | null>(
@@ -22,9 +24,22 @@ const RequestModalContext = createContext<RequestModalContextValue | null>(
 
 export function RequestModalProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState("");
 
-  const openRequestModal = useCallback(() => setIsOpen(true), []);
-  const closeRequestModal = useCallback(() => setIsOpen(false), []);
+  const openRequestModal = useCallback(() => {
+    setSelectedPlan("");
+    setIsOpen(true);
+  }, []);
+
+  const openRequestModalWithPlan = useCallback((plan: string) => {
+    setSelectedPlan(plan);
+    setIsOpen(true);
+  }, []);
+
+  const closeRequestModal = useCallback(() => {
+    setIsOpen(false);
+    setSelectedPlan("");
+  }, []);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -44,10 +59,10 @@ export function RequestModalProvider({ children }: { children: ReactNode }) {
 
   return (
     <RequestModalContext.Provider
-      value={{ openRequestModal, closeRequestModal, isOpen }}
+      value={{ openRequestModal, openRequestModalWithPlan, closeRequestModal, isOpen, selectedPlan }}
     >
       {children}
-      <RequestModal isOpen={isOpen} onClose={closeRequestModal} />
+      <RequestModal isOpen={isOpen} onClose={closeRequestModal} selectedPlan={selectedPlan} />
     </RequestModalContext.Provider>
   );
 }

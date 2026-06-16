@@ -9,17 +9,19 @@ export const LOGIN_PATH = "/login";
 export const CONTACT_EMAIL = "contact@altrics.tech";
 
 export const headerNavLinks = [
-  { href: "#directions", label: "Решения" },
-  { href: "#capabilities", label: "Сценарии" },
-  { href: "#launch-formats", label: "Форматы запуска" },
+  { href: "#platform", label: "Платформа" },
+  { href: "#scenarios", label: "Сценарии" },
   { href: "#industries", label: "Отрасли" },
-  { href: "#how-it-works", label: "Как внедряем" }
+  { href: "#pricing", label: "Тарифы" },
+  { href: "#process", label: "Как внедряем" }
 ] as const;
 
 export const footerNavLinks = [
-  { href: "#directions", label: "Решения" },
-  { href: "#launch-formats", label: "Форматы запуска" },
+  { href: "#platform", label: "Платформа" },
+  { href: "#scenarios", label: "Сценарии" },
   { href: "#industries", label: "Отрасли" },
-  { href: "#how-it-works", label: "Как внедряем" },
+  { href: "#interface", label: "Интерфейс" },
+  { href: "#pricing", label: "Тарифы" },
+  { href: "#process", label: "Как внедряем" },
   { href: "#cta", label: "Контакты" }
 ] as const;

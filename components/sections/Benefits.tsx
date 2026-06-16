@@ -8,7 +8,7 @@ export function BenefitsSection() {
       <SectionHeader
         label="Преимущества"
         title="Практическая ценность для бизнеса"
-        description="Внедряем AI так, чтобы он влиял на скорость работы, качество сервиса и операционную эффективность."
+        description="Внедряем ИИ так, чтобы он влиял на скорость работы, качество сервиса и операционную эффективность."
       />
 
       <dl className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

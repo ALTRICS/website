@@ -10,6 +10,7 @@ import { TELEGRAM_URL } from "@/lib/constants";
 type RequestModalProps = {
   isOpen: boolean;
   onClose: () => void;
+  selectedPlan?: string;
 };
 
 type FormState = {
@@ -46,10 +47,20 @@ const requiredFields: Array<
   keyof Pick<FormState, "name" | "company" | "contact">
 > = ["name", "company", "contact"];
 
-export function RequestModal({ isOpen, onClose }: RequestModalProps) {
+const planLabels: Record<string, string> = {
+  concierge: "Concierge",
+  enterprise: "Enterprise"
+};
+
+export function RequestModal({ isOpen, onClose, selectedPlan = "" }: RequestModalProps) {
   const [form, setForm] = useState<FormState>(initialForm);
   const [status, setStatus] = useState<SubmitStatus>("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [currentPlan, setCurrentPlan] = useState(selectedPlan);
+
+  if (selectedPlan !== currentPlan && selectedPlan && !currentPlan) {
+    setCurrentPlan(selectedPlan);
+  }
 
   if (!isOpen) return null;
 
@@ -58,6 +69,7 @@ export function RequestModal({ isOpen, onClose }: RequestModalProps) {
     setStatus("idle");
     setErrorMessage("");
     setForm(initialForm);
+    setCurrentPlan("");
   };
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -96,17 +108,22 @@ export function RequestModal({ isOpen, onClose }: RequestModalProps) {
         utm_term: params.get("utm_term") ?? ""
       };
 
+      const payload: Record<string, unknown> = {
+        ...form,
+        page: "landing",
+        createdAt: new Date().toISOString(),
+        ...utm
+      };
+      if (currentPlan) {
+        payload.selectedPlan = currentPlan;
+      }
+
       const response = await fetch("/api/leads", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify({
-          ...form,
-          page: "landing",
-          createdAt: new Date().toISOString(),
-          ...utm
-        })
+        body: JSON.stringify(payload)
       });
 
       if (!response.ok) {
@@ -244,9 +261,24 @@ export function RequestModal({ isOpen, onClose }: RequestModalProps) {
               Обсудить задачу
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Расскажите о процессе и мы предложим первый AI-сценарий и план
-              запуска. Кабинет подключается только если он нужен задаче.
+              Расскажите о процессе и мы предложим первый сценарий и план
+              запуска.
             </p>
+
+            {currentPlan && planLabels[currentPlan] && (
+              <div className="mt-4 flex items-center gap-3 rounded-xl border border-primary/20 bg-primary/5 px-4 py-3 text-sm">
+                <span className="font-medium text-foreground">
+                  Выбранный формат: {planLabels[currentPlan]}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setCurrentPlan("")}
+                  className="ml-auto shrink-0 text-xs font-medium text-muted-foreground underline-offset-2 hover:text-foreground hover:underline"
+                >
+                  Убрать
+                </button>
+              </div>
+            )}
 
             <form onSubmit={handleSubmit} className="mt-6 space-y-4" noValidate>
               <Field label="Имя" required>

@@ -4,10 +4,10 @@ import { howItWorks } from "@/lib/content";
 
 export function HowItWorksSection() {
   return (
-    <Section id="how-it-works" alt>
+    <Section id="process" alt>
       <SectionHeader
-        label="Процесс"
-        title="Как внедряем"
+        label="Как внедряем"
+        title="Процесс внедрения"
         description="Прозрачный процесс от анализа до запуска. Каждое решение адаптируем под ваш бизнес."
       />
 
